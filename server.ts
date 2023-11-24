@@ -1,7 +1,6 @@
 import express, { Express } from 'express';
 import path from 'path';
 
-import ApiBooks from './routes/api/ApiBooks';
 import ApiCar from './routes/api/ApiCar';
 import ApiAuth from './routes/api/ApiAuth';
 
@@ -17,7 +16,6 @@ class Server {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
 
-    this.app.use('/api/books', ApiBooks.routes());
     this.app.use('/api/car', ApiCar.routes());
     this.app.use('/api/auth', ApiAuth.routes());
   }
